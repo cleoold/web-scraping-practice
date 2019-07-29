@@ -56,7 +56,7 @@ for url in urls:
                 txt.write('\n')
         # download
         elif not _DEBUG:
-            foldername = re.sub(r'/|\\|:|\*|"|<|>|\||\?', '', title)
+            foldername = re.sub(r'/|\\|:|\*|"|<|>|\||\?|\r', '', title)
             os.makedirs(foldername, exist_ok=True)
             os.chdir(foldername)
             for j in range(1, length + 1):
